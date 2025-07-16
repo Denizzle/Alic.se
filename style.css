@@ -14,22 +14,17 @@ body {
 /* Loggan */
 .logo {
   display: block;
-  max-width: 220px;
-  margin: 20px auto;
+  max-width: 160px;
+  margin: 30px auto;
+  height: auto;
 }
+
 
 /* Hero-sektion */
 .hero {
   background-image: url("hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
 }
+
 
 .hero::after {
   content: "";
