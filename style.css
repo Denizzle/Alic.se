@@ -1,40 +1,65 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bas */
+body {
   background-color: #111;
   color: #fefefe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  padding: 30px 20px;
   text-align: center;
 }
 
+/* Logotyp */
 .header-container {
-  background-color: #fff;
-  padding: 30px 0;
+  max-width: 700px;
+  width: 100%;
 }
 
 .hero-logo {
   width: 100%;
-  max-width: 1000px;
+  height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 }
 
-main {
-  padding: 40px 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
+/* Rubrik och underrubrik */
+main h1 {
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Länkar */
 a {
   color: #00ff88;
   text-decoration: none;
-  font-weight: bold;
+  margin: 0 10px;
+  font-weight: 600;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
-  margin-top: 50px;
-  color: #aaa;
+  margin-top: auto;
   font-size: 0.9rem;
+  color: #777;
+  padding: 30px 0 0 0;
 }
