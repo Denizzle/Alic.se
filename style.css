@@ -1,141 +1,59 @@
-/* Reset och grundinställningar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #f5f5f5;
-  line-height: 1.6;
-  overflow-x: hidden;
+body, html {
+  height: 100%;
+  background-color: #f4f4f4;
+  font-family: 'Open Sauce', sans-serif;
 }
 
-/* HEADER */
-.site-header {
-  background-color: #000;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-container {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-title h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-.site-title .tagline {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 5px;
-}
-
-.main-nav a {
-  color: #00ff99;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.main-nav a:hover {
-  color: #ffffff;
-}
-
-/* HERO */
-.hero {
-  background-image: url('hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh; /* Gör att hero alltid tar hela skärmens höjd */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 1rem;
-  color: white;
-}
-
-.hero::before {
-   content: "";
+nav {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* justera efter behov */
-  z-index: 0;
+  top: 30px;
+  right: 60px;
+  z-index: 10;
+  display: flex;
+  gap: 40px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #ddd;
-}
-
-.hero-link {
-  color: #00ff99;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.hero-link:hover {
-  color: #ffffff;
-}
-
-/* CTA BUTTON */
-.cta-button {
-  display: inline-block;
-  margin-top: 30px;
-  background-color: #00ff99;
-  color: #000;
-  font-weight: bold;
-  padding: 12px 28px;
-  border-radius: 25px;
+nav a {
+  color: white;
   text-decoration: none;
-  transition: 0.3s ease;
+  font-family: 'Open Sauce', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
 }
 
-.cta-button:hover {
-  background-color: #00cc7a;
-  color: #fff;
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* FOOTER */
-footer {
-  background-color: #0b0b0b;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  color: #777;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.footer-logo {
-  margin-top: 15px;
-  max-width: 50px;
-  opacity: 0.8;
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  z-index: 1;
 }
