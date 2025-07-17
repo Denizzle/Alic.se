@@ -57,23 +57,25 @@ body {
 
 /* HERO */
 .hero {
-  background-color: #222; /* fallbackfärg */
-  /* behåll övrigt */
   background-image: url('hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 150px 20px;
+  min-height: 100vh; /* Gör att hero alltid tar hela skärmens höjd */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  position: relative;
+  padding: 4rem 1rem;
+  color: white;
 }
 
 .hero::before {
-  content: "";
+   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* justera efter behov */
+  z-index: 0;
 }
 
 .hero-content {
