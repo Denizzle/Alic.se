@@ -57,6 +57,8 @@ body {
 
 /* HERO */
 .hero {
+  background-color: #222; /* fallbackfärg */
+  /* behåll övrigt */
   background-image: url('hero-bg.jpg');
   background-size: cover;
   background-position: center;
