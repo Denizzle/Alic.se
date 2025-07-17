@@ -88,6 +88,33 @@ footer {
   position: relative;
 }
 
+.link-inline {
+  color: #00ff88;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.link-inline:hover {
+  color: #00cc6a;
+}
+
+.cta-button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  color: #0d0d0d;
+  background-color: #00ff88;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #00cc6a;
+}
+
+
 footer img {
   max-width: 60px;
   margin-top: 1rem;
