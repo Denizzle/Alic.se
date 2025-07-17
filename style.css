@@ -54,7 +54,7 @@ header {
 /* ====== HERO SECTION ====== */
 .hero {
   height: 100vh;
-  background-image: url("hero-bg.jpg");
+  background-image: url("DenisHeroBaby.png");
   background-size: cover;
   background-position: center;
   display: flex;
