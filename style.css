@@ -1,116 +1,124 @@
-/* Allmän Reset */
+/* Grundläggande resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  background-color: #f4f4f4;
-  font-family: 'Open Sauce', sans-serif;
-  scroll-behavior: smooth;
+body {
+  font-family: 'Open Sauce Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('DenisHeroBaby.png') no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 3rem;
-  color: white;
-}
-
-.hero::before {
-  content: '';
+/* Navigation */
+nav {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
-  z-index: 1;
-}
-
-/* NAVIGATION */
-.navbar {
+  top: 40px;
+  left: 40px;
+  right: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
-  position: relative;
+  z-index: 10;
 }
 
-.navbar img {
-  height: 40px;
+.logo img {
+  width: 60px;
+  height: auto;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 40px;
 }
 
-.nav-links li a {
+.nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
   font-weight: 500;
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-/* HERO CONTENT */
-.hero-content {
-  z-index: 2;
+  font-size: 16px;
   position: relative;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Hero-sektion */
+.hero {
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 100px 60px;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
   max-width: 700px;
-}
-
-.hero-title {
-  font-family: 'Open Sauce', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.8;
   color: white;
-  max-width: 90%;
+  border-radius: 8px;
 }
 
-/* SECTIONS */
-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.hero-content p {
+  font-size: 18px;
+  font-weight: 300;
 }
 
-/* CONTACT SECTION */
-.contact-section {
-  text-align: center;
+/* Footer */
+footer {
   background-color: #f9f9f9;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .signature {
   font-family: 'Brittany Signature', cursive;
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  color: #333;
+  font-size: 24px;
+  color: #000;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
 }
