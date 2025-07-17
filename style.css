@@ -80,11 +80,6 @@ nav ul li a:hover::after {
   text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 }
 
-.hero h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  margin-left: 0;
 }
 
 .hero p {
